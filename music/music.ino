@@ -5,16 +5,19 @@ int incomingByte = 0;
 
 char payload[150];
 
-const int DO = 6; // Digital PIN 2 of Arduino
+const int DO = 4; // Digital PIN 2 of Arduino
 
 // Digital PIN 3 to 11 of Arduino
-const int led_01 = 7;
-const int led_02 = 8;
-const int led_03 = 9;
-const int led_04 = 10;
-const int led_05 = 11;
-const int led_06 = 12;
-const int led_07 = 13;
+const int led_01 = 5;
+const int led_02 = 6;
+const int led_03 = 7;
+const int led_04 = 8;
+const int led_05 = 9;
+const int led_06 = 10;
+const int led_07 = 11;
+const int led_08 = 12;
+const int led_09 = 13;
+
 
 
 /** 
@@ -32,7 +35,7 @@ int sVal_07 = 155;
 
 
 int lastPin = 13; // last digital PIN number
-int totalLED = 7; // total LEDs
+int totalLED = 9; // total LEDs
 
 /**
  * Additional Settings
@@ -131,6 +134,9 @@ void music() {
     digitalWrite(led_05, LOW);
     digitalWrite(led_06, LOW);
     digitalWrite(led_07, LOW);
+    digitalWrite(led_08, LOW);
+    digitalWrite(led_09, LOW);
+
   }else
 
     if(sensorvalue == 1) {
@@ -141,7 +147,10 @@ void music() {
     digitalWrite(led_05, LOW);
     digitalWrite(led_06, LOW);
     digitalWrite(led_07, LOW);
-    }else
+    digitalWrite(led_08, LOW);
+    digitalWrite(led_09, LOW);
+    
+  }else
     if(sensorvalue == 2) {
     digitalWrite(led_01, HIGH);
     digitalWrite(led_02, HIGH);
@@ -150,7 +159,9 @@ void music() {
     digitalWrite(led_05, LOW);
     digitalWrite(led_06, LOW);
     digitalWrite(led_07, LOW);
-    }else
+    digitalWrite(led_08, LOW);
+    digitalWrite(led_09, LOW);
+  }else
     if(sensorvalue == 3) {
     digitalWrite(led_01, HIGH);
     digitalWrite(led_02, HIGH);
@@ -159,7 +170,10 @@ void music() {
     digitalWrite(led_05, LOW);
     digitalWrite(led_06, LOW);
     digitalWrite(led_07, LOW);
-    }else
+    digitalWrite(led_08, LOW);
+    digitalWrite(led_09, LOW);
+    
+  }else
     if(sensorvalue == 4) {
     digitalWrite(led_01, HIGH);
     digitalWrite(led_02, HIGH);
@@ -168,6 +182,8 @@ void music() {
     digitalWrite(led_05, LOW);
     digitalWrite(led_06, LOW);
     digitalWrite(led_07, LOW);
+    digitalWrite(led_08, LOW);
+    digitalWrite(led_09, LOW);
     }else
     if(sensorvalue == 5) {
     digitalWrite(led_01, HIGH);
@@ -177,6 +193,8 @@ void music() {
     digitalWrite(led_05, HIGH);
     digitalWrite(led_06, LOW);
     digitalWrite(led_07, LOW);
+    digitalWrite(led_08, LOW);
+    digitalWrite(led_09, LOW);
     }else
     if(sensorvalue == 6) {
     digitalWrite(led_01, HIGH);
@@ -186,6 +204,8 @@ void music() {
     digitalWrite(led_05, HIGH);
     digitalWrite(led_06, HIGH);
     digitalWrite(led_07, LOW);
+    digitalWrite(led_08, LOW);
+    digitalWrite(led_09, LOW);
     }
     if(sensorvalue == 7) {
     digitalWrite(led_01, HIGH);
@@ -195,6 +215,30 @@ void music() {
     digitalWrite(led_05, HIGH);
     digitalWrite(led_06, HIGH);
     digitalWrite(led_07, HIGH);
+    digitalWrite(led_08, LOW);
+    digitalWrite(led_09, LOW);
+    }else
+    if(sensorvalue == 8) {
+    digitalWrite(led_01, HIGH);
+    digitalWrite(led_02, HIGH);
+    digitalWrite(led_03, HIGH);
+    digitalWrite(led_04, HIGH);
+    digitalWrite(led_05, HIGH);
+    digitalWrite(led_06, HIGH);
+    digitalWrite(led_07, HIGH);
+    digitalWrite(led_08, HIGH);
+    digitalWrite(led_09, LOW);
+    }else
+    if(sensorvalue == 9) {
+    digitalWrite(led_01, HIGH);
+    digitalWrite(led_02, HIGH);
+    digitalWrite(led_03, HIGH);
+    digitalWrite(led_04, HIGH);
+    digitalWrite(led_05, HIGH);
+    digitalWrite(led_06, HIGH);
+    digitalWrite(led_07, HIGH);
+    digitalWrite(led_08, HIGH);
+    digitalWrite(led_09, HIGH);
     }
 
 }
