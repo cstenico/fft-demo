@@ -19,35 +19,13 @@ const int led_08 = 12;
 const int led_09 = 13;
 
 
-
-/** 
- * Corresponding Sensor Values (Sensor Threshold)
- * The values has 4 gap values, you can make how many gaps you like.
- */
- 
-int sVal_01 = 50; // Initial Threshold
-int sVal_02 = 70;
-int sVal_03 = 80;
-int sVal_04 = 90;
-int sVal_05 = 100;
-int sVal_06 = 120;
-int sVal_07 = 155;
-
-
 int lastPin = 13; // last digital PIN number
 int totalLED = 9; // total LEDs
 
-/**
- * Additional Settings
- */
- 
+
 int debugSwitch = false; // Switch for Debugging: true or false (ctrl+shift+M or ctrl+shift+L)
 int ledTest = true; // If true it will test the LEDs first before use (you can press reset to check LEDs if running correctly
 
-/**
- * Please keep out don't modify the codes below.
- * Just edit the variables above, thanks!
- */
 
 int sensorvalue = 0; // storage for recording sensor values
 void setup() {
@@ -69,16 +47,10 @@ void loop() {
   }
 
   if (Serial.available() >0) {
-    //char c = Serial.read();
-    //data[0] = c;
-    //data[1] = '\0';
-    //Serial.println(data);
     incomingByte = Serial.read(); 
     sensorvalue = incomingByte ;
-
-                // say what you got:
-                Serial.print("I received: ");
-                Serial.println(incomingByte);
+    Serial.print("I received: ");
+    Serial.println(incomingByte);
   }
 
   // Lights Animation
@@ -124,7 +96,6 @@ void initTest() {
 
 void music() {
   
-  // Basically the LED will turn on if the sensorvalue reach the threshold
   
   if(sensorvalue == 0) {
     digitalWrite(led_01, LOW);
